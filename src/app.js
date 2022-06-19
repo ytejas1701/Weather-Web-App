@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         title: 'Weather',
     });
 })
-
+const blah = 'hello';
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
