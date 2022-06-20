@@ -43,7 +43,7 @@ app.get('/weather', ({ query }, res) => {
         if(error) {
             return res.send({ error }); 
         }
-        weather(latitude, longitude, (error, { temperature, feelslike, weather_descriptions  } = {})=>{
+        weather(latitude, longitude, (error, { temperature, feelslike, weather_descriptions, observation_time } = {})=>{
             if(error) {
                 return res.send({ error }); 
             }
@@ -51,7 +51,8 @@ app.get('/weather', ({ query }, res) => {
                 temperature,
                 feelslike,
                 weather_descriptions,
-                label
+                label,
+                observation_time
             })
         })
     })

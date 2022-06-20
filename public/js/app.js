@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e)=>{
             if(data.error){
                 return message.textContent = data.error;
             }
-            message.textContent = data.label+'\r\n'+ data.weather_descriptions+'. Current temperature is '+data.temperature+'°C. It feels like '+data.feelslike+'°C.'
+            message.textContent = data.label+'\r\n'+ "Observation Time: " + data.observation_time + '\r\n' + data.weather_descriptions+'. Current temperature is '+data.temperature+'°C. It feels like '+data.feelslike+'°C.'
         })
     })
     })
